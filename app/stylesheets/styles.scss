@@ -1,0 +1,394 @@
+// Colors
+
+$sp-grey: #484848;
+$sp-light-grey: #6d6d6d;
+$sp-white: #fff;
+
+// Font Sizes
+
+$font-size-x-small: 14px;
+$font-size-small: 16px;
+$font-size-large: 24px;
+$font-size-x-large: 28px;
+$font-size-xx-large: 42px;
+$font-size-xxx-large: 62px;
+
+// Font Weight
+
+$font-weight-bold: 600;
+
+// Font Family
+
+$font-family-text: Arial,
+sans-serif;
+
+// Media Queries
+
+$mobile-small: 240px;
+$mobile-large: 320px;
+$tablet-small: 480px;
+$tablet-large: 768px;
+$screen-small: 989px;
+$screen-large: 1280px;
+$screen-x-large: 1180px;
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family-text;
+    font-size: $font-size-small;
+}
+.main-div {
+    padding-left: 8%;
+    padding-right: 8%;
+    height: 100%;
+    overflow: hidden;
+    background-color: $sp-grey;
+    color: $sp-white;
+    @media screen and (max-width: $tablet-large) {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+    #myCarousel {
+        max-width: 100%;
+        @media screen and (max-width: $screen-small) {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+    .carousel-inner {
+        img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            @media screen and (max-width: $tablet-large) {
+                height: 400px;
+            }
+        }
+    }
+    .carousel-control {
+        opacity: 1;
+        background-image: none !important;
+        &:hover {
+            background-image: none !important;
+        }
+    }
+    .secondSection {
+        text-align: center;
+        h1 {
+            font-size: 60px;
+            margin-top: 60px;
+        }
+        a {
+            font-size: 10px;
+            color: $sp-white;
+            font-size: $font-size-x-small;
+        }
+        p {
+            padding-top: 40px;
+            padding-bottom: 40px;
+            font-size: $font-size-large;
+        }
+        button {
+            height: 60px;
+            text-transform: uppercase;
+            background-color: transparent;
+            border: 1px solid $sp-white;
+            width: 220px;
+        }
+    }
+    /*Model caption*/
+    
+    .sectionThird {
+        padding-top: 60px;
+        #myImg {
+            cursor: pointer;
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            &:hover {
+                opacity: 0.7;
+            }
+            @media screen and (max-width: $screen-small) {
+                height: auto;
+            }
+        }
+        /* The Modal (background) */
+        
+        .modal {
+            display: none !important;
+            position: fixed;
+            /* Stay in place */
+            
+            z-index: 100;
+            /* Sit on top */
+            
+            padding-top: 100px;
+            /* Location of the box */
+            
+            left: 0;
+            top: 0;
+            width: 100%;
+            /* Full width */
+            
+            height: 100%;
+            /* Full height */
+            
+            overflow: auto;
+            /* Enable scroll if needed */
+            
+            background-color: rgb(0, 0, 0);
+            /* Fallback color */
+            
+            background-color: rgba(0, 0, 0, 0.9);
+            /* Black w/ opacity */
+            
+            &.show-modal {
+                display: block !important;
+            }
+        }
+        /* Modal Content (image) */
+        
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        /* Caption of Modal Image */
+        
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+            margin-top: 20%;
+        }
+        /* Add Animation */
+        
+        .modal-content,
+        #caption {
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(0)
+            }
+            to {
+                -webkit-transform: scale(1)
+            }
+        }
+        @keyframes zoom {
+            from {
+                transform: scale(0)
+            }
+            to {
+                transform: scale(1)
+            }
+        }
+        /* The Close Button */
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: $sp-white;
+            opacity: 1;
+            font-size: 40px;
+            font-weight: $font-weight-bold;
+            transition: 0.3s;
+            &:hover, &:focus {
+                color: #f1f1f1;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        }
+        @media only screen and (max-width: $tablet-large) {
+            .modal-content {
+                width: 100%;
+            }
+        }
+    }
+    .sectionFour {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        h2 {
+            font-weight: $font-weight-bold;
+        }
+        p {
+            padding-left: 15%;
+            padding-right: 15%;
+            font-size: 18px;
+        }
+    }
+    .imgSection {
+        .row {
+            padding-top: 10px;
+            margin: 0px;
+        }
+        .content {
+            border-top: 1px solid #fff;
+            padding-top: 10px;
+            .contentHeader {
+                font-size: $font-size-x-small;
+                font-weight: $font-weight-bold;
+            }
+            .contentDetails {
+                font-size: 13px;
+            }
+        }
+        .imgFirst {
+            @media screen and (min-width: $screen-small) {
+                padding-right: 0;
+            }
+            &.imgFirstPadding {
+                @media screen and (min-width: $screen-small) {
+                    padding: 0;
+                }
+                @media screen and (max-width: $screen-small) {
+                    padding-top: 20px;
+                }
+            }
+            img {
+                width: 100%;
+                object-fit: cover;
+                &:hover{
+              
+             -webkit-transition: all .2s ease-in;
+             -webkit-transform: scale(1);
+            -ms-transition: all .2s ease-in;
+            -ms-transform: scale(1);
+            -moz-transition: all .2s ease-in;
+            -moz-transform: scale(1.5);
+            transition: all .2s ease-in;
+            transform: scale(1.05)
+
+                }
+            }
+            .imgFirstOne {
+                height: 400px;
+                @media screen and (min-width: $screen-small) {
+                    padding-right: 5px;
+                }
+                @media screen and (max-width: $screen-small) {
+                    height: auto;
+                }
+            }
+            .imgFirstTwo {
+                height: 400px;
+                @media screen and (min-width: $screen-small) {
+                    padding-left: 5px;
+                }
+                @media screen and (max-width: $screen-small) {
+                    height: auto;
+                }
+            }
+        }
+    }
+    .sectionSix {
+        text-align: center;
+        margin-top: 40px;
+        margin-bottom: 40px;
+        .content-bottom {
+            padding-top: 5px;
+            padding-bottom: 40px;
+            p {
+                font-size: $font-size-x-small;
+            }
+            h3 {
+                text-transform: uppercase;
+                font-weight: $font-weight-bold;
+            }
+        }
+        .row {
+            font-size: $font-size-x-small;
+            img {
+                height: 200px;
+                width: 100%;
+                cursor: pointer;
+                &:hover {
+                    -webkit-transition: all 200ms ease-in;
+                    -webkit-transform: scale(1);
+                    -ms-transition: all 200ms ease-in;
+                    -ms-transform: scale(1);
+                    -moz-transition: all 200ms ease-in;
+                    -moz-transform: scale(1.5);
+                    transition: all 200ms ease-in;
+                    transform: scale(1.05);
+                }
+            }
+            .text-bold {
+                padding-top: 20px;
+                font-weight: $font-weight-bold;
+                text-transform: uppercase;
+            }
+            p {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    .sectionFive {
+        background: $sp-white;
+        height: 530px;
+        margin-left: -13%;
+        margin-right: -13%;
+        color: #000;
+        .background-color {
+            background: #e6e6e6;
+            height: 440px;
+            margin-right: 8%;
+            margin-top: 90px;
+        }
+        .show-content-text {
+            padding-top: 172px;
+            padding-left: 25%;
+            padding-right: 4%;
+            h3 {
+                text-transform: uppercase;
+            }
+            .border-bottom {
+                border: 1px solid #e6e6e6;
+                width: 11%;
+                margin-top: 17px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+}
+/*Header*/
+
+.header-main {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    img {
+        height: 40px;
+    }
+    span {
+        float: right;
+        font-weight: $font-weight-bold;
+        padding-top: $font-size-small;
+    }
+}
+/*footer*/
+
+.footer-main {
+    div {
+        padding-top: 30px;
+        p {
+            text-align: center;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            color: $sp-light-grey;
+            border-top: 1px solid $sp-light-grey;
+        }
+    }
+}
