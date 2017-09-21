@@ -27,6 +27,7 @@ Run the Application
 The project is preconfigured with a simple development web server. The simplest way to start this server is:
 
 npm start
+
 Now browse to the app at http://localhost:3000
 
 # Directory Layout
@@ -45,17 +46,18 @@ app/                     --> all the source files for the application
   
       header/	   --> Header component with html and JS file
       
-      content/          --> content component 
+      content/          --> content component
       
-      footer/             --> Footer component  
+      footer/             --> Footer component
       
 index.js	                 --> main application modules
 
-index.html	   --> app layout file (the main html template file of the app)
+index.html	   --> app layout file (the main html template file of the app) 
 
-  stylesheets/        --> SASS stylesheet 
+  stylesheets/        --> SASS stylesheet  
   
-      styles.scss       --> stylesheet
+      styles.scss       --> stylesheet 
+
 
 
 # Summary:
